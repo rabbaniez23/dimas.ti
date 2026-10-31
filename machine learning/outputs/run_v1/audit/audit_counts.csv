@@ -1,0 +1,10 @@
+variant,stage,rule,n_records,quoted_website_preprocessing_json,quoted_paper_table2
+primary,00_input,Semua baris viirs_clean_all.csv,14211269,,14211269.0
+primary,01_valid,"Waktu, koordinat, radiansi terbaca; bukan fill 999999; rentang koordinat valid",14211268,14211268.0,
+primary,02_qf1,"QF_Detect = 1 (strong/boat detection, V23)",11164249,11164249.0,
+primary,03_not_land,Land_Mask <> 0 (kode daratan V23); near-shore 1/2 dipertahankan,11164249,,
+primary,04_in_wpp,Di dalam salah satu dari 11 poligon WPP (point-in-polygon),7654423,,
+primary,05_dedup_exact,"Buang duplikat eksak (Date_Mscan, Lat, Lon, Rad_DNB, QF sama)",7644731,,
+legacy_like,L03_land_mask_ne_1,Land_Mask != 1 (perlakuan lama; 1 = near-shore di V23),11098366,11098366.0,
+legacy_like,L04_eez_indonesia,EEZ = Indonesian EEZ,7379853,7379853.0,
+legacy_like,L05_in_wpp,Di dalam 11 poligon WPP (tanpa dedup),7375153,7375153.0,

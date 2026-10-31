@@ -1,0 +1,298 @@
+{
+  "steps": {
+    "01_audit": {
+      "finished_at_utc": "2026-10-18T05:08:57.765624+00:00",
+      "seconds": 21.8,
+      "input": {
+        "path": "viirs_clean_all.csv",
+        "bytes": 2105205236,
+        "mtime_utc": "2026-07-21T16:58:04+00:00",
+        "hash_method": "sha256_sampled_3x16MB",
+        "hash": "ec4f1b2ef872c71b1606db812c49d0ceb8c171453b1b545d7b0ac975b0f2d3af"
+      },
+      "analytical_records": 7644731
+    },
+    "02_datasets": {
+      "finished_at_utc": "2026-10-18T05:09:33.486275+00:00",
+      "seconds": 26.8,
+      "checks": {
+        "grid_all_1000m_reconciles": true,
+        "grid_all_1000m_cells": 1237043,
+        "grid_all_1000m_cells_ge2years": 679816,
+        "grid_all_2000m_reconciles": true,
+        "grid_all_2000m_cells": 536173,
+        "grid_all_2000m_cells_ge2years": 324187,
+        "grid_train_1000m_reconciles": true,
+        "grid_train_1000m_cells": 1066860,
+        "grid_train_1000m_cells_ge2years": 580250,
+        "grid_train_2000m_reconciles": true,
+        "grid_train_2000m_cells": 460435,
+        "grid_train_2000m_cells_ge2years": 276575,
+        "panel_reconciles_with_points": true,
+        "panel_status_counts": {
+          "observed_positive": 1870
+        }
+      }
+    },
+    "04_forecast": {
+      "finished_at_utc": "2026-10-18T05:26:30.527769+00:00",
+      "seconds": 197.1,
+      "checks": {
+        "ocean_join_no_duplication": true,
+        "lag1_equals_prev_month_same_wpp": true,
+        "first_row_each_wpp_lag1_nan": true,
+        "ocean_source_before_target": true,
+        "roll3_uses_only_past": true,
+        "splits_disjoint": true,
+        "train_rows_dropped_missing_features": 33,
+        "same_wpp_month_pairs_across_models": {
+          "val": true,
+          "test": true
+        },
+        "n_failed_predictions": 0
+      },
+      "rf_selected": {
+        "M2_RF_History": {
+          "max_depth": 12,
+          "min_samples_leaf": 1,
+          "max_features": 0.5
+        },
+        "M3_RF_Ocean": {
+          "max_depth": 12,
+          "min_samples_leaf": 5,
+          "max_features": 0.5
+        }
+      }
+    },
+    "05_evaluate": {
+      "finished_at_utc": "2026-10-18T05:27:23.686809+00:00",
+      "seconds": 2.6,
+      "checks": {
+        "n_test_rows_per_model": {
+          "M0_SeasonalNaive": 132,
+          "M1_ETS": 132,
+          "M2_RF_History": 132,
+          "M3_RF_Ocean": 132
+        },
+        "mase_denominator_defined_all_wpp": true
+      }
+    },
+    "03_cfa": {
+      "finished_at_utc": "2026-10-18T05:31:10.106752+00:00",
+      "seconds": 482.0,
+      "checks": {
+        "wpp_done": [
+          712,
+          571,
+          572,
+          573,
+          711,
+          713,
+          714,
+          715,
+          716,
+          717,
+          718
+        ],
+        "cfa_monthly_train_reconciles_catalog": true,
+        "cfa_train_max_date": "2023-12-31",
+        "n_cfa": 322,
+        "total_cfa_area_km2": 542184.0,
+        "geometry_crs": "EPSG:6933"
+      }
+    },
+    "06_figures_partial": {
+      "finished_at_utc": "2026-10-18T05:37:57.621937+00:00",
+      "status": {
+        "s01_s02": "ok"
+      }
+    },
+    "07_export": {
+      "finished_at_utc": "2026-10-18T05:43:16.788783+00:00",
+      "checks": {
+        "metrics_recomputed_from_predictions_match": true,
+        "ablation_matches_metrics": true,
+        "cfa_crs": "EPSG:6933",
+        "cfa_area_from_geometry_matches_catalog": true,
+        "no_synthetic_or_hardcoded_results": "semua tabel dibangun dari viirs_clean_all.csv, shapefile WPP, dan series.json",
+        "website_export_bytes": {
+          "cfa_catalog.json": 96788,
+          "cfa_monthly_2024_2025.json": 629460,
+          "cfa_reference_web.geojson": 3550787,
+          "forecast_hindcast_2025.json": 53999,
+          "metrics_test_2025.json": 6397,
+          "monthly_counts.json": 15122
+        },
+        "ocean_repo_commit": "0bacaf492f22798fb111628eb88c79ffafb6359c"
+      }
+    },
+    "06_figures": {
+      "finished_at_utc": "2026-10-18T05:43:02.756928+00:00",
+      "status": {
+        "f01": "ok",
+        "f02": "ok",
+        "f03": "ok",
+        "f04": "ok",
+        "f05": "ok",
+        "f06": "ok",
+        "f07": "ok",
+        "f08": "ok",
+        "s01_s02": "ok",
+        "s03": "ok",
+        "s04": "ok",
+        "s05_s06": "ok",
+        "s07_s10": "ok"
+      }
+    }
+  },
+  "run_id": "run_v1",
+  "config": {
+    "run_id": "run_v1",
+    "seed": 42,
+    "paths": {
+      "viirs_clean": "viirs_clean_all.csv",
+      "wpp_dir": "shp&shx",
+      "wpp_file_pattern": "namobj_WPP-RI {wpp}.shp",
+      "ocean_dir": "external/indonesia-fishing-watch/src/data/oseanografi",
+      "paper_pdf": "draft_awal_eng (2).pdf",
+      "outputs": "outputs",
+      "cache": "outputs/_cache"
+    },
+    "wpp_codes": [
+      571,
+      572,
+      573,
+      711,
+      712,
+      713,
+      714,
+      715,
+      716,
+      717,
+      718
+    ],
+    "wpp_assumed_crs": "EPSG:4326",
+    "resources": {
+      "duckdb_memory_limit": "3GB",
+      "threads": 4,
+      "mode": "full"
+    },
+    "period": {
+      "data_context_start": "2012-04-01",
+      "main_start": "2013-01-01",
+      "main_end": "2025-12-31",
+      "partial_year": 2026
+    },
+    "quality": {
+      "qf_detect_keep": [
+        1
+      ],
+      "land_mask_exclude": [
+        0
+      ],
+      "sentinel_values": [
+        999999,
+        -999999,
+        999999.0
+      ],
+      "lat_range": [
+        -90,
+        90
+      ],
+      "lon_range": [
+        -180,
+        180
+      ]
+    },
+    "spatial": {
+      "grid_crs": "EPSG:6933",
+      "grid_size_m": 1000,
+      "sensitivity_grid_sizes_m": [
+        2000
+      ],
+      "boundary_rule": "lowest_wpp_code"
+    },
+    "hdbscan": {
+      "cfa_train_end": "2023-12-31",
+      "cfa_train_start": "2013-01-01",
+      "min_distinct_years": 2,
+      "sensitivity_min_distinct_years": [
+        3
+      ],
+      "min_cluster_size": [
+        20,
+        50,
+        100
+      ],
+      "min_samples": [
+        5,
+        10,
+        20
+      ],
+      "metric": "haversine",
+      "cluster_selection_method": "eom",
+      "pilot_wpp": 712
+    },
+    "forecast": {
+      "train_target_end": "2023-12",
+      "val": [
+        "2024-01",
+        "2024-12"
+      ],
+      "test": [
+        "2025-01",
+        "2025-12"
+      ],
+      "lags": [
+        1,
+        2,
+        3,
+        12
+      ],
+      "rolling_window": 3,
+      "ocean_lag_months": 1,
+      "ocean_vars": [
+        "sst",
+        "chl"
+      ],
+      "rf": {
+        "n_estimators": 300,
+        "random_state": 42,
+        "n_jobs": 4,
+        "grid": {
+          "max_depth": [
+            null,
+            12
+          ],
+          "min_samples_leaf": [
+            1,
+            5
+          ],
+          "max_features": [
+            1.0,
+            0.5
+          ]
+        }
+      },
+      "target_transform": "log1p"
+    }
+  },
+  "package_versions": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "pandas": "3.0.6",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "geopandas": "1.2.0",
+    "shapely": "2.2.0",
+    "pyproj": "3.7.2",
+    "hdbscan": "0.8.44",
+    "duckdb": "1.5.6",
+    "pyarrow": "26.0.0",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "pyyaml": "6.0.3"
+  }
+}

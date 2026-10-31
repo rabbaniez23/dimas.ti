@@ -1,0 +1,109 @@
+{
+  "rf": {
+    "M2_RF_History": {
+      "max_depth": 12,
+      "min_samples_leaf": 1,
+      "max_features": 0.5
+    },
+    "M3_RF_Ocean": {
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "max_features": 0.5
+    }
+  },
+  "ets": {
+    "571": {
+      "trend": null,
+      "damped_trend": false
+    },
+    "572": {
+      "trend": null,
+      "damped_trend": false
+    },
+    "573": {
+      "trend": null,
+      "damped_trend": false
+    },
+    "711": {
+      "trend": null,
+      "damped_trend": false
+    },
+    "712": {
+      "trend": null,
+      "damped_trend": false
+    },
+    "713": {
+      "trend": null,
+      "damped_trend": false
+    },
+    "714": {
+      "trend": null,
+      "damped_trend": false
+    },
+    "715": {
+      "trend": null,
+      "damped_trend": false
+    },
+    "716": {
+      "trend": null,
+      "damped_trend": false
+    },
+    "717": {
+      "trend": null,
+      "damped_trend": false
+    },
+    "718": {
+      "trend": null,
+      "damped_trend": false
+    }
+  },
+  "features": {
+    "M2_RF_History": [
+      "lag_1",
+      "lag_2",
+      "lag_3",
+      "lag_12",
+      "roll3_mean",
+      "roll3_std",
+      "moy_sin",
+      "moy_cos",
+      "wpp_571",
+      "wpp_572",
+      "wpp_573",
+      "wpp_711",
+      "wpp_712",
+      "wpp_713",
+      "wpp_714",
+      "wpp_715",
+      "wpp_716",
+      "wpp_717",
+      "wpp_718"
+    ],
+    "M3_RF_Ocean": [
+      "lag_1",
+      "lag_2",
+      "lag_3",
+      "lag_12",
+      "roll3_mean",
+      "roll3_std",
+      "moy_sin",
+      "moy_cos",
+      "sst_lag1",
+      "log10_chl_lag1",
+      "sst_yoy_lag1",
+      "log10_chl_yoy_lag1",
+      "wpp_571",
+      "wpp_572",
+      "wpp_573",
+      "wpp_711",
+      "wpp_712",
+      "wpp_713",
+      "wpp_714",
+      "wpp_715",
+      "wpp_716",
+      "wpp_717",
+      "wpp_718"
+    ]
+  },
+  "target_transform": "log1p (RF dan ETS), prediksi dikembalikan dengan expm1"
+}

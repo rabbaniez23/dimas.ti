@@ -1,0 +1,18 @@
+input_column,internal_column,dtype,unit,definition_v23_or_note,role,present_in_input,source
+Lat_DNB,lat,float64,derajat,VBD pixel latitude from VIIRS DNB geolocation file (fill 999999),lokasi titik; grid; HDBSCAN,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+Lon_DNB,lon,float64,derajat,VBD pixel longitude from VIIRS DNB geolocation file (fill 999999),lokasi titik; grid; HDBSCAN,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+Rad_DNB,rad_dnb,float64,nW/cm2/sr,Radiance of VBD pixel in VIIRS DNB band (fill 999999),ringkasan radiansi; kelas radiansi (deskriptif),True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+Date_Mscan,ts_utc,timestamp,UTC,VBD pixel date-time at mid-point of DNB scan reported in Universal Time,waktu kejadian; tanggal/bulan UTC,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+QF_Detect,qf_detect,int,-,"1 strong, 2 weak, 3 blurry, 4 gas flare, ... (V23 QF_Detect tab)",filter kualitas QF=1,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+QF_Bitflag,qf_bitflag,int64,-,Sum of VBD algorithm bit flags,diagnostik,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+Land_Mask,land_mask,int,-,"Land-sea mask flag. Land=0. Water=3. Near-shore=1,2",filter daratan (kode 0),True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+EEZ,eez,string,-,Exclusive Economic Zone for VBD pixel,konteks; tidak dipakai sebagai filter utama,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+MPA,mpa,string,-,Marine Protected Area for VBD pixel,konteks; bukan indikator pelanggaran,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+Rad_I04,rad_i04,float64,W/m2/sr/um,Radiance of VBD pixel in VIIRS I4 band (3.7 um),diagnostik,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+Glint,glint,float64,0-1,Probability of lunar glint impacting DNB data,diagnostik,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+Date,date_col,date,UTC,Turunan cleaning lama dari Date_Mscan,diperiksa konsistensinya; tidak dipakai,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+Year,year_col,int,-,Turunan cleaning lama,diperiksa konsistensinya; tidak dipakai,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+Month,month_col,int,-,Turunan cleaning lama,diperiksa konsistensinya; tidak dipakai,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+Day,(tidak dibawa),-,-,Turunan cleaning lama,tidak dipakai,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+(turunan),wpp,int16,-,Kode WPP hasil point-in-polygon pada 11 shapefile WPP (EPSG:4326 diasumsikan),unit stratifikasi,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program
+(turunan),wpp_hits,int8,-,Jumlah poligon WPP yang memuat titik,pemeriksaan tumpang tindih batas,True,EOG VBD readme V23 (references/eog_vbd_readme_v23_r20180824.xlsx) / turunan program

@@ -1,0 +1,86 @@
+{
+  "files": [
+    {
+      "path": "external\\indonesia-fishing-watch\\src\\data\\oseanografi\\series.json",
+      "bytes": 166126,
+      "mtime_utc": "2026-10-18T04:52:52.940205+00:00",
+      "hash_method": "sha256_full",
+      "hash": "b1227076a2ee13664ac9503fa48f3b6e23b2d517d56215f1a25b1cd1bace8a9b"
+    },
+    {
+      "path": "external\\indonesia-fishing-watch\\src\\data\\oseanografi\\meta.json",
+      "bytes": 3707,
+      "mtime_utc": "2026-10-18T04:52:52.936587+00:00",
+      "hash_method": "sha256_full",
+      "hash": "4af04870234a5c42245840b4712906d04280e98cb9ec340ee3283e6f284b1c2b"
+    }
+  ],
+  "generatedAt_website": "2026-10-15T04:41:03Z",
+  "source_statement": "E.U. Copernicus Marine Service Information",
+  "variables": {
+    "sst": {
+      "key": "sst",
+      "label": "Suhu permukaan laut",
+      "unit": "\u00b0C",
+      "kind": "series",
+      "log": false,
+      "arrows": false,
+      "dataset": "cmems_mod_glo_phy-mnstd_my_0.25deg_P1M-m",
+      "product": "GLOBAL_MULTIYEAR_PHY_ENS_001_031",
+      "period": {
+        "start": "1993-01",
+        "end": "2025-12",
+        "climatology": [
+          2012,
+          2025
+        ]
+      }
+    },
+    "chl": {
+      "key": "chl",
+      "label": "Klorofil-a",
+      "unit": "mg/m\u00b3",
+      "kind": "series",
+      "log": true,
+      "arrows": false,
+      "dataset": "cmems_obs-oc_glo_bgc-plankton_my_l4-multi-4km_P1M",
+      "product": "OCEANCOLOUR_GLO_BGC_L4_MY_009_104",
+      "period": {
+        "start": "1998-01",
+        "end": "2026-09",
+        "climatology": [
+          2012,
+          2025
+        ]
+      }
+    }
+  },
+  "product_type": {
+    "sst": "reanalysis ensemble mean (model), bukan pengukuran langsung",
+    "chl": "satellite ocean-colour L4 multi-sensor gap-filled (observasi terinterpolasi)"
+  },
+  "depth": {
+    "sst": "lapisan permukaan model 0.4\u20131 m",
+    "chl": "permukaan (ocean colour)"
+  },
+  "aggregation": "rata-rata berbobot cos(lat) sel di dalam poligon WPP; klorofil rata-rata geometrik (log10)",
+  "rounding": "4 angka penting (sig(x, 4)) di series.json",
+  "native_resolution": {
+    "sst": "0.25\u00b0",
+    "chl": "4 km"
+  },
+  "coverage": {
+    "sst": [
+      "2012-01-01",
+      "2025-12-01"
+    ],
+    "chl": [
+      "2012-01-01",
+      "2026-09-01"
+    ]
+  },
+  "n_missing": {
+    "sst": 99,
+    "chl": 0
+  }
+}

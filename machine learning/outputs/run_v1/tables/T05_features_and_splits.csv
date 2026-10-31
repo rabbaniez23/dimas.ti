@@ -1,0 +1,43 @@
+model,feature,source_month_rule
+M2_RF_History,lag_1,m-1
+M2_RF_History,lag_2,m-2
+M2_RF_History,lag_3,m-3
+M2_RF_History,lag_12,m-12
+M2_RF_History,roll3_mean,m-3..m-1
+M2_RF_History,roll3_std,m-3..m-1
+M2_RF_History,moy_sin,kalender bulan target
+M2_RF_History,moy_cos,kalender bulan target
+M2_RF_History,wpp_571,kategori tetap
+M2_RF_History,wpp_572,kategori tetap
+M2_RF_History,wpp_573,kategori tetap
+M2_RF_History,wpp_711,kategori tetap
+M2_RF_History,wpp_712,kategori tetap
+M2_RF_History,wpp_713,kategori tetap
+M2_RF_History,wpp_714,kategori tetap
+M2_RF_History,wpp_715,kategori tetap
+M2_RF_History,wpp_716,kategori tetap
+M2_RF_History,wpp_717,kategori tetap
+M2_RF_History,wpp_718,kategori tetap
+M3_RF_Ocean,lag_1,m-1
+M3_RF_Ocean,lag_2,m-2
+M3_RF_Ocean,lag_3,m-3
+M3_RF_Ocean,lag_12,m-12
+M3_RF_Ocean,roll3_mean,m-3..m-1
+M3_RF_Ocean,roll3_std,m-3..m-1
+M3_RF_Ocean,moy_sin,kalender bulan target
+M3_RF_Ocean,moy_cos,kalender bulan target
+M3_RF_Ocean,sst_lag1,m-1
+M3_RF_Ocean,log10_chl_lag1,m-1
+M3_RF_Ocean,sst_yoy_lag1,m-1 minus m-13
+M3_RF_Ocean,log10_chl_yoy_lag1,m-1 minus m-13
+M3_RF_Ocean,wpp_571,kategori tetap
+M3_RF_Ocean,wpp_572,kategori tetap
+M3_RF_Ocean,wpp_573,kategori tetap
+M3_RF_Ocean,wpp_711,kategori tetap
+M3_RF_Ocean,wpp_712,kategori tetap
+M3_RF_Ocean,wpp_713,kategori tetap
+M3_RF_Ocean,wpp_714,kategori tetap
+M3_RF_Ocean,wpp_715,kategori tetap
+M3_RF_Ocean,wpp_716,kategori tetap
+M3_RF_Ocean,wpp_717,kategori tetap
+M3_RF_Ocean,wpp_718,kategori tetap

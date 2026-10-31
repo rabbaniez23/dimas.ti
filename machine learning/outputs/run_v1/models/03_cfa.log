@@ -1,0 +1,152 @@
+  [main] WPP 712 mcs=20 ms=5: k=268 noise=0.141 (213.1s)
+  [main] WPP 712 mcs=20 ms=10: k=56 noise=0.047 (268.3s)
+  [main] WPP 712 mcs=20 ms=20: k=17 noise=0.004 (74.6s)
+  [main] WPP 712 mcs=50 ms=5: k=9 noise=0.005 (60.0s)
+  [main] WPP 712 mcs=50 ms=10: k=5 noise=0.001 (43.1s)
+  [main] WPP 712 mcs=50 ms=20: k=10 noise=0.003 (33.1s)
+  [main] WPP 712 mcs=100 ms=5: k=8 noise=0.005 (36.2s)
+  [main] WPP 712 mcs=100 ms=10: k=4 noise=0.002 (31.4s)
+  [main] WPP 712 mcs=100 ms=20: k=9 noise=0.003 (22.4s)
+WPP 712: terpilih mcs=100 ms=20, 9 CFA, luas 244,428 km2
+  [main] WPP 571 mcs=20 ms=5: k=65 noise=0.211 (0.6s)
+  [main] WPP 571 mcs=20 ms=10: k=19 noise=0.032 (0.5s)
+  [main] WPP 571 mcs=20 ms=20: k=20 noise=0.048 (0.5s)
+  [main] WPP 571 mcs=50 ms=5: k=22 noise=0.176 (0.6s)
+  [main] WPP 571 mcs=50 ms=10: k=13 noise=0.050 (0.5s)
+  [main] WPP 571 mcs=50 ms=20: k=10 noise=0.063 (0.5s)
+  [main] WPP 571 mcs=100 ms=5: k=5 noise=0.049 (0.6s)
+  [main] WPP 571 mcs=100 ms=10: k=5 noise=0.049 (0.5s)
+  [main] WPP 571 mcs=100 ms=20: k=5 noise=0.063 (0.5s)
+WPP 571: terpilih mcs=50 ms=10, 13 CFA, luas 24,239 km2
+  [main] WPP 572 mcs=20 ms=5: k=183 noise=0.188 (1.0s)
+  [main] WPP 572 mcs=20 ms=10: k=119 noise=0.152 (0.9s)
+  [main] WPP 572 mcs=20 ms=20: k=81 noise=0.176 (0.8s)
+  [main] WPP 572 mcs=50 ms=5: k=68 noise=0.181 (1.0s)
+  [main] WPP 572 mcs=50 ms=10: k=46 noise=0.142 (0.9s)
+  [main] WPP 572 mcs=50 ms=20: k=51 noise=0.170 (0.8s)
+  [main] WPP 572 mcs=100 ms=5: k=48 noise=0.203 (1.0s)
+  [main] WPP 572 mcs=100 ms=10: k=34 noise=0.148 (0.9s)
+  [main] WPP 572 mcs=100 ms=20: k=39 noise=0.163 (0.8s)
+WPP 572: terpilih mcs=50 ms=10, 46 CFA, luas 28,152 km2
+  [main] WPP 573 mcs=20 ms=5: k=146 noise=0.350 (1.1s)
+  [main] WPP 573 mcs=20 ms=10: k=95 noise=0.229 (0.9s)
+  [main] WPP 573 mcs=20 ms=20: k=73 noise=0.264 (0.7s)
+  [main] WPP 573 mcs=50 ms=5: k=54 noise=0.210 (1.1s)
+  [main] WPP 573 mcs=50 ms=10: k=46 noise=0.240 (0.9s)
+  [main] WPP 573 mcs=50 ms=20: k=39 noise=0.258 (0.7s)
+  [main] WPP 573 mcs=100 ms=5: k=25 noise=0.232 (1.1s)
+  [main] WPP 573 mcs=100 ms=10: k=25 noise=0.248 (0.9s)
+  [main] WPP 573 mcs=100 ms=20: k=25 noise=0.247 (0.7s)
+WPP 573: terpilih mcs=50 ms=10, 46 CFA, luas 19,726 km2
+  [main] WPP 711 mcs=20 ms=5: k=426 noise=0.267 (6.7s)
+  [main] WPP 711 mcs=20 ms=10: k=200 noise=0.166 (6.3s)
+  [main] WPP 711 mcs=20 ms=20: k=147 noise=0.177 (5.7s)
+  [main] WPP 711 mcs=50 ms=5: k=180 noise=0.238 (6.9s)
+  [main] WPP 711 mcs=50 ms=10: k=95 noise=0.165 (6.2s)
+  [main] WPP 711 mcs=50 ms=20: k=93 noise=0.193 (5.8s)
+  [main] WPP 711 mcs=100 ms=5: k=108 noise=0.251 (6.6s)
+  [main] WPP 711 mcs=100 ms=10: k=70 noise=0.157 (6.1s)
+  [main] WPP 711 mcs=100 ms=20: k=65 noise=0.176 (5.7s)
+WPP 711: terpilih mcs=50 ms=10, 95 CFA, luas 112,610 km2
+  [main] WPP 713 mcs=20 ms=5: k=106 noise=0.123 (1.6s)
+  [main] WPP 713 mcs=20 ms=10: k=64 noise=0.029 (1.4s)
+  [main] WPP 713 mcs=20 ms=20: k=53 noise=0.032 (1.3s)
+  [main] WPP 713 mcs=50 ms=5: k=48 noise=0.026 (1.6s)
+  [main] WPP 713 mcs=50 ms=10: k=43 noise=0.023 (1.4s)
+  [main] WPP 713 mcs=50 ms=20: k=44 noise=0.032 (1.3s)
+  [main] WPP 713 mcs=100 ms=5: k=34 noise=0.037 (1.6s)
+  [main] WPP 713 mcs=100 ms=10: k=32 noise=0.031 (1.4s)
+  [main] WPP 713 mcs=100 ms=20: k=31 noise=0.042 (1.4s)
+WPP 713: terpilih mcs=50 ms=10, 43 CFA, luas 44,496 km2
+  [main] WPP 714 mcs=20 ms=5: k=42 noise=0.078 (0.2s)
+  [main] WPP 714 mcs=20 ms=10: k=36 noise=0.091 (0.2s)
+  [main] WPP 714 mcs=20 ms=20: k=21 noise=0.064 (0.2s)
+  [main] WPP 714 mcs=50 ms=5: k=24 noise=0.055 (0.2s)
+  [main] WPP 714 mcs=50 ms=10: k=24 noise=0.072 (0.2s)
+  [main] WPP 714 mcs=50 ms=20: k=17 noise=0.074 (0.2s)
+  [main] WPP 714 mcs=100 ms=5: k=16 noise=0.084 (0.2s)
+  [main] WPP 714 mcs=100 ms=10: k=17 noise=0.088 (0.2s)
+  [main] WPP 714 mcs=100 ms=20: k=12 noise=0.097 (0.2s)
+WPP 714: terpilih mcs=50 ms=5, 24 CFA, luas 6,233 km2
+  [main] WPP 715 mcs=20 ms=5: k=40 noise=0.120 (0.1s)
+  [main] WPP 715 mcs=20 ms=10: k=38 noise=0.127 (0.1s)
+  [main] WPP 715 mcs=20 ms=20: k=32 noise=0.158 (0.1s)
+  [main] WPP 715 mcs=50 ms=5: k=22 noise=0.152 (0.1s)
+  [main] WPP 715 mcs=50 ms=10: k=21 noise=0.171 (0.1s)
+  [main] WPP 715 mcs=50 ms=20: k=20 noise=0.175 (0.1s)
+  [main] WPP 715 mcs=100 ms=5: k=15 noise=0.210 (0.1s)
+  [main] WPP 715 mcs=100 ms=10: k=14 noise=0.254 (0.1s)
+  [main] WPP 715 mcs=100 ms=20: k=14 noise=0.166 (0.1s)
+WPP 715: terpilih mcs=50 ms=10, 21 CFA, luas 2,432 km2
+  [main] WPP 716 mcs=20 ms=5: k=18 noise=0.060 (0.1s)
+  [main] WPP 716 mcs=20 ms=10: k=17 noise=0.074 (0.2s)
+  [main] WPP 716 mcs=20 ms=20: k=14 noise=0.064 (0.1s)
+  [main] WPP 716 mcs=50 ms=5: k=14 noise=0.066 (0.1s)
+  [main] WPP 716 mcs=50 ms=10: k=12 noise=0.052 (0.1s)
+  [main] WPP 716 mcs=50 ms=20: k=12 noise=0.061 (0.1s)
+  [main] WPP 716 mcs=100 ms=5: k=9 noise=0.037 (0.1s)
+  [main] WPP 716 mcs=100 ms=10: k=7 noise=0.024 (0.1s)
+  [main] WPP 716 mcs=100 ms=20: k=8 noise=0.073 (0.1s)
+WPP 716: terpilih mcs=50 ms=20, 12 CFA, luas 4,401 km2
+  [main] WPP 717 mcs=20 ms=5: k=10 noise=0.058 (0.0s)
+  [main] WPP 717 mcs=20 ms=10: k=9 noise=0.062 (0.0s)
+  [main] WPP 717 mcs=20 ms=20: k=9 noise=0.088 (0.0s)
+  [main] WPP 717 mcs=50 ms=5: k=6 noise=0.048 (0.0s)
+  [main] WPP 717 mcs=50 ms=10: k=6 noise=0.091 (0.0s)
+  [main] WPP 717 mcs=50 ms=20: k=6 noise=0.113 (0.0s)
+  [main] WPP 717 mcs=100 ms=5: k=5 noise=0.102 (0.0s)
+  [main] WPP 717 mcs=100 ms=10: k=5 noise=0.144 (0.0s)
+  [main] WPP 717 mcs=100 ms=20: k=5 noise=0.163 (0.0s)
+WPP 717: terpilih mcs=50 ms=10, 6 CFA, luas 1,003 km2
+  [main] WPP 718 mcs=20 ms=5: k=38 noise=0.054 (2.1s)
+  [main] WPP 718 mcs=20 ms=10: k=32 noise=0.045 (1.9s)
+  [main] WPP 718 mcs=20 ms=20: k=11 noise=0.012 (1.8s)
+  [main] WPP 718 mcs=50 ms=5: k=10 noise=0.013 (2.1s)
+  [main] WPP 718 mcs=50 ms=10: k=9 noise=0.010 (1.9s)
+  [main] WPP 718 mcs=50 ms=20: k=8 noise=0.010 (1.8s)
+  [main] WPP 718 mcs=100 ms=5: k=7 noise=0.011 (2.2s)
+  [main] WPP 718 mcs=100 ms=10: k=7 noise=0.007 (1.9s)
+  [main] WPP 718 mcs=100 ms=20: k=7 noise=0.010 (1.9s)
+WPP 718: terpilih mcs=100 ms=5, 7 CFA, luas 54,464 km2
+  [ge3years_1km] WPP 712 mcs=100 ms=20: k=46 noise=0.171 (8.7s)
+  [ge2years_2km] WPP 712 mcs=100 ms=20: k=2 noise=0.006 (2.4s)
+  [ge3years_1km] WPP 571 mcs=50 ms=10: k=4 noise=0.012 (0.4s)
+  [ge2years_2km] WPP 571 mcs=50 ms=10: k=4 noise=0.002 (0.3s)
+  [ge3years_1km] WPP 572 mcs=50 ms=10: k=48 noise=0.146 (0.5s)
+  [ge2years_2km] WPP 572 mcs=50 ms=10: k=40 noise=0.191 (0.5s)
+  [ge3years_1km] WPP 573 mcs=50 ms=10: k=16 noise=0.073 (0.4s)
+  [ge2years_2km] WPP 573 mcs=50 ms=10: k=44 noise=0.262 (0.7s)
+  [ge3years_1km] WPP 711 mcs=50 ms=10: k=94 noise=0.161 (2.8s)
+  [ge2years_2km] WPP 711 mcs=50 ms=10: k=18 noise=0.066 (2.3s)
+  [ge3years_1km] WPP 713 mcs=50 ms=10: k=39 noise=0.012 (1.0s)
+  [ge2years_2km] WPP 713 mcs=50 ms=10: k=30 noise=0.078 (0.5s)
+  [ge3years_1km] WPP 714 mcs=50 ms=5: k=19 noise=0.052 (0.2s)
+  [ge2years_2km] WPP 714 mcs=50 ms=5: k=13 noise=0.137 (0.1s)
+  [ge3years_1km] WPP 715 mcs=50 ms=10: k=15 noise=0.160 (0.0s)
+  [ge2years_2km] WPP 715 mcs=50 ms=10: k=16 noise=0.197 (0.0s)
+  [ge3years_1km] WPP 716 mcs=50 ms=20: k=10 noise=0.067 (0.1s)
+  [ge2years_2km] WPP 716 mcs=50 ms=20: k=7 noise=0.125 (0.1s)
+  [ge3years_1km] WPP 717 mcs=50 ms=10: k=5 noise=0.074 (0.0s)
+  [ge2years_2km] WPP 717 mcs=50 ms=10: k=4 noise=0.287 (0.0s)
+  [ge3years_1km] WPP 718 mcs=100 ms=5: k=13 noise=0.025 (1.1s)
+  [ge2years_2km] WPP 718 mcs=100 ms=5: k=5 noise=0.060 (0.8s)
+{
+ "wpp_done": [
+  712,
+  571,
+  572,
+  573,
+  711,
+  713,
+  714,
+  715,
+  716,
+  717,
+  718
+ ],
+ "cfa_monthly_train_reconciles_catalog": true,
+ "cfa_train_max_date": "2023-12-31",
+ "n_cfa": 322,
+ "total_cfa_area_km2": 542184.0,
+ "geometry_crs": "EPSG:6933"
+}

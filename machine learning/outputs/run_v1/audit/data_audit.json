@@ -1,0 +1,248 @@
+{
+  "source_file": {
+    "path": "viirs_clean_all.csv",
+    "bytes": 2105205236,
+    "mtime_utc": "2026-07-21T16:58:04+00:00",
+    "hash_method": "sha256_sampled_3x16MB",
+    "hash": "ec4f1b2ef872c71b1606db812c49d0ceb8c171453b1b545d7b0ac975b0f2d3af"
+  },
+  "input_columns": [
+    "Lat_DNB",
+    "Lon_DNB",
+    "Rad_DNB",
+    "Date_Mscan",
+    "QF_Detect",
+    "QF_Bitflag",
+    "Land_Mask",
+    "EEZ",
+    "MPA",
+    "Rad_I04",
+    "Glint",
+    "Date",
+    "Year",
+    "Month",
+    "Day"
+  ],
+  "inventory": {
+    "n_rows": 14211269,
+    "ts_min": "2012-04-01 15:46:46",
+    "ts_max": "2026-05-31 19:30:40",
+    "n_parse_issue": 0.0,
+    "n_ts_null": 1.0,
+    "n_coord_null": 1.0,
+    "n_rad_null": 0.0
+  },
+  "bbox_input": {
+    "lat_min": -13.999985,
+    "lat_max": 7.999999,
+    "lon_min": 92.000031,
+    "lon_max": 141.499847
+  },
+  "sentinel_999999_by_column": {
+    "lat": 0.0,
+    "lon": 0.0,
+    "rad_dnb": 0.0,
+    "qf_detect": 0.0,
+    "qf_bitflag": 0.0,
+    "land_mask": 0.0,
+    "rad_i04": 0.0,
+    "glint": 0.0
+  },
+  "diagnostic_columns_out_of_range": {
+    "glint_gt_1": 1571.0,
+    "glint_ge_999999": 51.0,
+    "glint_max": 390258000000000.0,
+    "rad_i04_le_minus999": 17369.0,
+    "rad_i04_le_minus999_qf1": 14764.0
+  },
+  "derived_column_consistency": {
+    "date_mismatch": 0.0,
+    "year_mismatch": 0.0,
+    "month_mismatch": 0.0
+  },
+  "qf_detect_counts": [
+    {
+      "qf_detect": 1,
+      "n": 11164250
+    },
+    {
+      "qf_detect": 2,
+      "n": 2511375
+    },
+    {
+      "qf_detect": 4,
+      "n": 535644
+    }
+  ],
+  "land_mask_counts": [
+    {
+      "land_mask": 1,
+      "n": 210928
+    },
+    {
+      "land_mask": 3,
+      "n": 14000341
+    }
+  ],
+  "hour_utc_counts": [
+    {
+      "hour_utc": 14,
+      "n": 44
+    },
+    {
+      "hour_utc": 15,
+      "n": 322818
+    },
+    {
+      "hour_utc": 16,
+      "n": 1188419
+    },
+    {
+      "hour_utc": 17,
+      "n": 4986913
+    },
+    {
+      "hour_utc": 18,
+      "n": 6200281
+    },
+    {
+      "hour_utc": 19,
+      "n": 1507781
+    },
+    {
+      "hour_utc": 20,
+      "n": 5012
+    },
+    {
+      "hour_utc": null,
+      "n": 1
+    }
+  ],
+  "nonpositive_radiance_by_qf": [
+    {
+      "qf_detect": 2,
+      "n": 90
+    }
+  ],
+  "wpp_overlap_hits": [
+    {
+      "wpp_hits": 0,
+      "n": 4566294
+    },
+    {
+      "wpp_hits": 1,
+      "n": 9644975
+    }
+  ],
+  "exact_duplicates_all_rows": 22781,
+  "stages": [
+    {
+      "variant": "primary",
+      "stage": "00_input",
+      "rule": "Semua baris viirs_clean_all.csv",
+      "n_records": 14211269,
+      "quoted_website_preprocessing_json": NaN,
+      "quoted_paper_table2": 14211269.0
+    },
+    {
+      "variant": "primary",
+      "stage": "01_valid",
+      "rule": "Waktu, koordinat, radiansi terbaca; bukan fill 999999; rentang koordinat valid",
+      "n_records": 14211268,
+      "quoted_website_preprocessing_json": 14211268.0,
+      "quoted_paper_table2": NaN
+    },
+    {
+      "variant": "primary",
+      "stage": "02_qf1",
+      "rule": "QF_Detect = 1 (strong/boat detection, V23)",
+      "n_records": 11164249,
+      "quoted_website_preprocessing_json": 11164249.0,
+      "quoted_paper_table2": NaN
+    },
+    {
+      "variant": "primary",
+      "stage": "03_not_land",
+      "rule": "Land_Mask <> 0 (kode daratan V23); near-shore 1/2 dipertahankan",
+      "n_records": 11164249,
+      "quoted_website_preprocessing_json": NaN,
+      "quoted_paper_table2": NaN
+    },
+    {
+      "variant": "primary",
+      "stage": "04_in_wpp",
+      "rule": "Di dalam salah satu dari 11 poligon WPP (point-in-polygon)",
+      "n_records": 7654423,
+      "quoted_website_preprocessing_json": NaN,
+      "quoted_paper_table2": NaN
+    },
+    {
+      "variant": "primary",
+      "stage": "05_dedup_exact",
+      "rule": "Buang duplikat eksak (Date_Mscan, Lat, Lon, Rad_DNB, QF sama)",
+      "n_records": 7644731,
+      "quoted_website_preprocessing_json": NaN,
+      "quoted_paper_table2": NaN
+    },
+    {
+      "variant": "legacy_like",
+      "stage": "L03_land_mask_ne_1",
+      "rule": "Land_Mask != 1 (perlakuan lama; 1 = near-shore di V23)",
+      "n_records": 11098366,
+      "quoted_website_preprocessing_json": 11098366.0,
+      "quoted_paper_table2": NaN
+    },
+    {
+      "variant": "legacy_like",
+      "stage": "L04_eez_indonesia",
+      "rule": "EEZ = Indonesian EEZ",
+      "n_records": 7379853,
+      "quoted_website_preprocessing_json": 7379853.0,
+      "quoted_paper_table2": NaN
+    },
+    {
+      "variant": "legacy_like",
+      "stage": "L05_in_wpp",
+      "rule": "Di dalam 11 poligon WPP (tanpa dedup)",
+      "n_records": 7375153,
+      "quoted_website_preprocessing_json": 7375153.0,
+      "quoted_paper_table2": NaN
+    }
+  ],
+  "analytical_view": {
+    "path": "D:\\lomba\\dimas-ti\\machine learning\\outputs\\run_v1\\data\\viirs_analytical.parquet",
+    "n_records": 7644731,
+    "ts_min": "2012-04-01 15:48:32",
+    "ts_max": "2026-05-31 19:30:07"
+  },
+  "months_without_any_record": [],
+  "quoted_paper_not_computed": {
+    "raw_records": 18115494,
+    "post_cleaning_records": 14211269,
+    "analytical_records": 7380357,
+    "wpp_counts": {
+      "571": 432304,
+      "572": 196361,
+      "573": 409597,
+      "711": 532758,
+      "712": 3887263,
+      "713": 826975,
+      "714": 20828,
+      "715": 70741,
+      "716": 153085,
+      "717": 37160,
+      "718": 684256
+    },
+    "time_coverage_text": "2012-July 2026"
+  },
+  "decisions": {
+    "qf": "QF_Detect=1 dipertahankan (sesuai paper). QF bukan label fishing/transit.",
+    "land_mask": "Input tidak berisi Land_Mask=0 (daratan V23). Land_Mask=1 = near-shore menurut readme V23 dan dipertahankan; varian lama 'Land_Mask != 1' dilaporkan sebagai pembanding.",
+    "eez": "Tidak ada filter EEZ pada view utama: domain = poligon WPP, sama dengan domain ringkasan oseanografi.",
+    "duplicates": "Duplikat eksak (waktu-scan, lat, lon, radiansi, QF identik) dibuang; koordinat sama pada malam berbeda dipertahankan.",
+    "outliers": "Tidak ada pembuangan outlier radiansi (IQR/z-score).",
+    "wpp_crs": "Shapefile tanpa .prj/.dbf; CRS EPSG:4326 diasumsikan dari rentang koordinat; kode WPP dari nama file.",
+    "boundary_rule": "Titik di >1 poligon -> kode WPP terkecil.",
+    "date": "Tanggal/bulan memakai UTC. Seluruh lintasan malam Indonesia (jam 14-20 UTC) jatuh pada satu tanggal UTC, sehingga tanggal UTC dapat dipakai sebagai identitas malam."
+  }
+}

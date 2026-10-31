@@ -1,0 +1,363 @@
+{
+ "generated_at": "2026-10-18T05:43:03.601359+00:00",
+ "run_id": "run_v1",
+ "unit": "jumlah deteksi VIIRS VBD QF=1 (bukan kapal unik)",
+ "domain": "11 poligon WPP-RI (tanpa filter ZEE); titik Land_Mask=0 tidak ada di input",
+ "source": "EOG VIIRS Boat Detection V23 (viirs_clean_all.csv), diproses ulang run ini",
+ "status": "hindcast",
+ "metric_note": "MASE: penyebut = MAE seasonal naive pada target latih 2013-04..2023-12",
+ "records": [
+  {
+   "wpp": 571,
+   "model": "M0_SeasonalNaive",
+   "n_months": 12,
+   "MAE": 608.167,
+   "RMSE": 814.517,
+   "MASE": 0.758
+  },
+  {
+   "wpp": 572,
+   "model": "M0_SeasonalNaive",
+   "n_months": 12,
+   "MAE": 1036.333,
+   "RMSE": 1303.519,
+   "MASE": 0.984
+  },
+  {
+   "wpp": 573,
+   "model": "M0_SeasonalNaive",
+   "n_months": 12,
+   "MAE": 1830.917,
+   "RMSE": 2304.375,
+   "MASE": 2.981
+  },
+  {
+   "wpp": 711,
+   "model": "M0_SeasonalNaive",
+   "n_months": 12,
+   "MAE": 1844.0,
+   "RMSE": 2713.226,
+   "MASE": 0.831
+  },
+  {
+   "wpp": 712,
+   "model": "M0_SeasonalNaive",
+   "n_months": 12,
+   "MAE": 5019.417,
+   "RMSE": 6748.137,
+   "MASE": 0.785
+  },
+  {
+   "wpp": 713,
+   "model": "M0_SeasonalNaive",
+   "n_months": 12,
+   "MAE": 1160.25,
+   "RMSE": 1536.84,
+   "MASE": 0.798
+  },
+  {
+   "wpp": 714,
+   "model": "M0_SeasonalNaive",
+   "n_months": 12,
+   "MAE": 391.667,
+   "RMSE": 453.173,
+   "MASE": 1.41
+  },
+  {
+   "wpp": 715,
+   "model": "M0_SeasonalNaive",
+   "n_months": 12,
+   "MAE": 383.833,
+   "RMSE": 467.109,
+   "MASE": 3.157
+  },
+  {
+   "wpp": 716,
+   "model": "M0_SeasonalNaive",
+   "n_months": 12,
+   "MAE": 262.5,
+   "RMSE": 342.038,
+   "MASE": 1.03
+  },
+  {
+   "wpp": 717,
+   "model": "M0_SeasonalNaive",
+   "n_months": 12,
+   "MAE": 149.167,
+   "RMSE": 172.226,
+   "MASE": 3.201
+  },
+  {
+   "wpp": 718,
+   "model": "M0_SeasonalNaive",
+   "n_months": 12,
+   "MAE": 1437.667,
+   "RMSE": 1992.432,
+   "MASE": 0.851
+  },
+  {
+   "wpp": 571,
+   "model": "M1_ETS",
+   "n_months": 12,
+   "MAE": 481.756,
+   "RMSE": 645.336,
+   "MASE": 0.601
+  },
+  {
+   "wpp": 572,
+   "model": "M1_ETS",
+   "n_months": 12,
+   "MAE": 606.096,
+   "RMSE": 787.862,
+   "MASE": 0.575
+  },
+  {
+   "wpp": 573,
+   "model": "M1_ETS",
+   "n_months": 12,
+   "MAE": 1297.041,
+   "RMSE": 1521.961,
+   "MASE": 2.112
+  },
+  {
+   "wpp": 711,
+   "model": "M1_ETS",
+   "n_months": 12,
+   "MAE": 1589.89,
+   "RMSE": 2175.532,
+   "MASE": 0.717
+  },
+  {
+   "wpp": 712,
+   "model": "M1_ETS",
+   "n_months": 12,
+   "MAE": 4241.952,
+   "RMSE": 5931.124,
+   "MASE": 0.664
+  },
+  {
+   "wpp": 713,
+   "model": "M1_ETS",
+   "n_months": 12,
+   "MAE": 904.144,
+   "RMSE": 1327.648,
+   "MASE": 0.622
+  },
+  {
+   "wpp": 714,
+   "model": "M1_ETS",
+   "n_months": 12,
+   "MAE": 339.191,
+   "RMSE": 380.794,
+   "MASE": 1.221
+  },
+  {
+   "wpp": 715,
+   "model": "M1_ETS",
+   "n_months": 12,
+   "MAE": 280.295,
+   "RMSE": 352.546,
+   "MASE": 2.305
+  },
+  {
+   "wpp": 716,
+   "model": "M1_ETS",
+   "n_months": 12,
+   "MAE": 277.803,
+   "RMSE": 336.506,
+   "MASE": 1.09
+  },
+  {
+   "wpp": 717,
+   "model": "M1_ETS",
+   "n_months": 12,
+   "MAE": 105.196,
+   "RMSE": 134.095,
+   "MASE": 2.258
+  },
+  {
+   "wpp": 718,
+   "model": "M1_ETS",
+   "n_months": 12,
+   "MAE": 1601.693,
+   "RMSE": 2107.894,
+   "MASE": 0.948
+  },
+  {
+   "wpp": 571,
+   "model": "M2_RF_History",
+   "n_months": 12,
+   "MAE": 468.997,
+   "RMSE": 593.892,
+   "MASE": 0.585
+  },
+  {
+   "wpp": 572,
+   "model": "M2_RF_History",
+   "n_months": 12,
+   "MAE": 690.576,
+   "RMSE": 872.403,
+   "MASE": 0.656
+  },
+  {
+   "wpp": 573,
+   "model": "M2_RF_History",
+   "n_months": 12,
+   "MAE": 1413.398,
+   "RMSE": 1860.353,
+   "MASE": 2.301
+  },
+  {
+   "wpp": 711,
+   "model": "M2_RF_History",
+   "n_months": 12,
+   "MAE": 1491.038,
+   "RMSE": 2316.316,
+   "MASE": 0.672
+  },
+  {
+   "wpp": 712,
+   "model": "M2_RF_History",
+   "n_months": 12,
+   "MAE": 4338.651,
+   "RMSE": 6395.103,
+   "MASE": 0.679
+  },
+  {
+   "wpp": 713,
+   "model": "M2_RF_History",
+   "n_months": 12,
+   "MAE": 891.77,
+   "RMSE": 1229.373,
+   "MASE": 0.614
+  },
+  {
+   "wpp": 714,
+   "model": "M2_RF_History",
+   "n_months": 12,
+   "MAE": 371.067,
+   "RMSE": 408.558,
+   "MASE": 1.336
+  },
+  {
+   "wpp": 715,
+   "model": "M2_RF_History",
+   "n_months": 12,
+   "MAE": 310.733,
+   "RMSE": 387.664,
+   "MASE": 2.556
+  },
+  {
+   "wpp": 716,
+   "model": "M2_RF_History",
+   "n_months": 12,
+   "MAE": 253.258,
+   "RMSE": 317.486,
+   "MASE": 0.994
+  },
+  {
+   "wpp": 717,
+   "model": "M2_RF_History",
+   "n_months": 12,
+   "MAE": 117.12,
+   "RMSE": 147.788,
+   "MASE": 2.513
+  },
+  {
+   "wpp": 718,
+   "model": "M2_RF_History",
+   "n_months": 12,
+   "MAE": 1456.855,
+   "RMSE": 2014.265,
+   "MASE": 0.862
+  },
+  {
+   "wpp": 571,
+   "model": "M3_RF_Ocean",
+   "n_months": 12,
+   "MAE": 402.539,
+   "RMSE": 565.324,
+   "MASE": 0.502
+  },
+  {
+   "wpp": 572,
+   "model": "M3_RF_Ocean",
+   "n_months": 12,
+   "MAE": 726.045,
+   "RMSE": 931.559,
+   "MASE": 0.689
+  },
+  {
+   "wpp": 573,
+   "model": "M3_RF_Ocean",
+   "n_months": 12,
+   "MAE": 1447.481,
+   "RMSE": 1773.688,
+   "MASE": 2.357
+  },
+  {
+   "wpp": 711,
+   "model": "M3_RF_Ocean",
+   "n_months": 12,
+   "MAE": 1533.284,
+   "RMSE": 2243.914,
+   "MASE": 0.691
+  },
+  {
+   "wpp": 712,
+   "model": "M3_RF_Ocean",
+   "n_months": 12,
+   "MAE": 4289.337,
+   "RMSE": 6048.358,
+   "MASE": 0.671
+  },
+  {
+   "wpp": 713,
+   "model": "M3_RF_Ocean",
+   "n_months": 12,
+   "MAE": 929.583,
+   "RMSE": 1246.679,
+   "MASE": 0.64
+  },
+  {
+   "wpp": 714,
+   "model": "M3_RF_Ocean",
+   "n_months": 12,
+   "MAE": 357.716,
+   "RMSE": 394.391,
+   "MASE": 1.288
+  },
+  {
+   "wpp": 715,
+   "model": "M3_RF_Ocean",
+   "n_months": 12,
+   "MAE": 302.517,
+   "RMSE": 375.418,
+   "MASE": 2.488
+  },
+  {
+   "wpp": 716,
+   "model": "M3_RF_Ocean",
+   "n_months": 12,
+   "MAE": 236.955,
+   "RMSE": 293.327,
+   "MASE": 0.93
+  },
+  {
+   "wpp": 717,
+   "model": "M3_RF_Ocean",
+   "n_months": 12,
+   "MAE": 122.355,
+   "RMSE": 152.369,
+   "MASE": 2.626
+  },
+  {
+   "wpp": 718,
+   "model": "M3_RF_Ocean",
+   "n_months": 12,
+   "MAE": 1364.585,
+   "RMSE": 1923.19,
+   "MASE": 0.807
+  }
+ ]
+}

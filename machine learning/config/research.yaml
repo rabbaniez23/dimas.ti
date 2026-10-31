@@ -1,0 +1,71 @@
+# Konfigurasi penelitian VIIRS-VBD -> CFA (HDBSCAN) + peramalan (Random Forest)
+# Semua path relatif terhadap root proyek. Input tidak pernah ditimpa.
+
+run_id: run_v1
+seed: 42
+
+paths:
+  viirs_clean: viirs_clean_all.csv          # CSV perantara hasil cleaning lama (input, read-only)
+  wpp_dir: "shp&shx"                        # 11 shapefile WPP (hanya .shp/.shx; .dbf/.prj tidak ada)
+  wpp_file_pattern: "namobj_WPP-RI {wpp}.shp"
+  ocean_dir: external/indonesia-fishing-watch/src/data/oseanografi
+  paper_pdf: "draft_awal_eng (2).pdf"
+  outputs: outputs
+  cache: outputs/_cache                     # tahapan mahal (Parquet bertipe, join WPP) di-cache di sini
+
+wpp_codes: [571, 572, 573, 711, 712, 713, 714, 715, 716, 717, 718]
+wpp_assumed_crs: "EPSG:4326"                # asumsi: .prj tidak tersedia, koordinat berupa derajat lintang/bujur
+
+resources:
+  duckdb_memory_limit: 3GB
+  threads: 4
+  mode: full                                # full | pilot (pilot = hanya WPP 712 untuk HDBSCAN)
+
+period:
+  data_context_start: "2012-04-01"          # warm-up fitur, bukan tahun penuh
+  main_start: "2013-01-01"
+  main_end: "2025-12-31"
+  partial_year: 2026                        # ditampilkan terpisah, tidak dipakai di model
+
+quality:
+  qf_detect_keep: [1]                       # V23: 1=boat, 2=weak, 4=gas flare (bukan label fishing/transit)
+  # Land_Mask V23: 0=land, 1/2=near-shore, 3=water. Keputusan akhir ditulis di audit.
+  land_mask_exclude: [0]                    # hanya kode daratan yang dibuang; near-shore dipertahankan (lihat data_issues.md)
+  sentinel_values: [999999, -999999, 999999.0]
+  lat_range: [-90, 90]
+  lon_range: [-180, 180]
+
+spatial:
+  grid_crs: "EPSG:6933"                     # WGS 84 / NSIDC EASE-Grid 2.0 Global (equal-area)
+  grid_size_m: 1000
+  sensitivity_grid_sizes_m: [2000]
+  boundary_rule: "lowest_wpp_code"          # bila titik jatuh di >1 poligon, pilih kode WPP terkecil (deterministik)
+
+hdbscan:
+  cfa_train_end: "2023-12-31"
+  cfa_train_start: "2013-01-01"
+  min_distinct_years: 2
+  sensitivity_min_distinct_years: [3]
+  min_cluster_size: [20, 50, 100]
+  min_samples: [5, 10, 20]
+  metric: haversine
+  cluster_selection_method: eom
+  pilot_wpp: 712
+
+forecast:
+  train_target_end: "2023-12"
+  val: ["2024-01", "2024-12"]
+  test: ["2025-01", "2025-12"]
+  lags: [1, 2, 3, 12]
+  rolling_window: 3
+  ocean_lag_months: 1                       # retrospektif; bukan latensi operasional
+  ocean_vars: [sst, chl]
+  rf:
+    n_estimators: 300
+    random_state: 42
+    n_jobs: 4
+    grid:                                   # anggaran sama untuk M2 dan M3 (8 kandidat)
+      max_depth: [null, 12]
+      min_samples_leaf: [1, 5]
+      max_features: [1.0, 0.5]
+  target_transform: log1p                   # dilatih pada log1p(y), prediksi dikembalikan ke skala deteksi

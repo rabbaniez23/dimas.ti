@@ -1,0 +1,27 @@
+# --- Lingkungan & cache ---
+.venv/
+__pycache__/
+*.py[cod]
+
+# --- Dokumen (proposal, makalah, draf) tidak disertakan ---
+*.pdf
+*.docx
+*.md
+!README.md
+!machine learning/outputs/run_v1/audit/*.md
+!machine learning/outputs/run_v1/report/*.md
+!machine learning/outputs/run_v1/figures/**/*.pdf
+
+# --- Data besar (dibuat ulang oleh pipeline) ---
+machine learning/viirs_clean_all.csv
+machine learning/data_cleaning.py
+machine learning/outputs/_cache/
+machine learning/outputs/run_v1/data/*.parquet
+machine learning/outputs/run_v1/data/cfa_reference.geojson
+machine learning/outputs/run_v1/models/hdbscan_runs/
+
+# --- Repositori terpisah (dirujuk lewat tautan di README) ---
+machine learning/external/
+
+# --- Skrip pembuat dokumen proposal ---
+machine learning/scripts/08_proposal_docx.py

@@ -1,0 +1,8 @@
+analysis_branch,status,reason
+Kepadatan spasial (KDE),dihitung ulang (bentuk lain),"Diganti histogram spasial grid 1 km EPSG:6933 (jumlah per sel), bukan KDE; dipakai di F03."
+Distribusi radiansi,dihitung ulang,S01 histogram log dari view analitis saat ini; median dihitung ulang.
+Profil WPP & kelas radiansi,dihitung ulang; lampiran,"S09; kelas <10, 10-400, >400 nW/cm2/sr disebut kelas radiansi, bukan ukuran kapal. Angka per WPP berbeda dari Tabel 5 paper (lihat data_issues.md)."
+Tren jangka panjang (MK/Sen),tidak dijalankan ulang; lampiran,"Hanya deret tahunan S07 ditampilkan. Uji MK tidak diulang karena n=13 tahun, autokorelasi dan 11 uji berganda belum ditangani; angka paper tidak disalin."
+Variasi antartahun (CV),dihitung ulang; lampiran,S10 memakai 2013-2025; cutoff CV paper bukan standar universal.
+Pola musiman (STL),dihitung ulang (bentuk lain),F04 memakai indeks musiman median per bulan kalender; STL tidak diulang.
+Forecasting (ETS/SARIMA),diganti protokol baru,M0/M1/M2/M3 rolling 1 langkah 2025; angka ETS/SARIMA paper (horizon 12 bulan) tidak sebanding.
